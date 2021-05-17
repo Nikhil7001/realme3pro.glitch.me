@@ -94,7 +94,7 @@ def parse_content(content):
         }
     for i in content.split():
         if i.startswith("@"):
-            replacments[i] = f"<a href=https://t.me/{i[1:]})>{i}</a>"
+            replacments[i] = f"<a href=https://t.me/{i[1:]}>{i}</a>"
     for old, new in replacments.items():
         content = content.replace(old, new)
     return content
